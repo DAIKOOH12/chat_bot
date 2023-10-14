@@ -1,0 +1,16 @@
+{"intents": [
+      {"tag": "Chào",
+        "patterns": ["Xin chào", "Có ai ở đây không?", "một ngày tốt lành", "Chào bạn"],
+        "responses": ["Xin chào!", "Thật tốt khi được gặp lại bạn"],
+        "context_set": ""
+      },
+      {"tag": "Cảm ơn",
+       "patterns": ["Cảm ơn bạn", "Kết quả tốt đấy", "tốt lắm", "tuyệt Vời"],
+       "responses": ["Happy to help!", "Any time!", "My pleasure", "hehe thank sờ kiu bấy bì"]
+      },
+      {"tag": "phàn nàn",
+       "patterns": ["bạn chậm quá", "quá lâu"],
+       "responses": ["xin lỗi bạn", "thật lòng mong bạn bỏ qua cho"]
+      }
+   ]
+}
