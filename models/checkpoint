@@ -1,2 +1,2 @@
-model_checkpoint_path: "/home/truong/pythonProject1-20231013T155731Z-001/pythonProject1/models/model.tflearn"
-all_model_checkpoint_paths: "/home/truong/pythonProject1-20231013T155731Z-001/pythonProject1/models/model.tflearn"
+model_checkpoint_path: "/home/phuong/PycharmProjects/AIBOTCHAT/chat_bot/models/model.tflearn"
+all_model_checkpoint_paths: "/home/phuong/PycharmProjects/AIBOTCHAT/chat_bot/models/model.tflearn"

@@ -1,44 +1,134 @@
-{"intents": [
-      {"tag": "Chào",
-        "patterns": ["Xin chào", "Có ai ở đây không?", "một ngày tốt lành", "Chào bạn"],
-        "responses": ["Xin chào!", "Thật tốt khi được gặp lại bạn"],
-        "context_set": ""
-      },
-      {"tag": "Cảm ơn",
-       "patterns": ["Cảm ơn bạn", "Kết quả tốt đấy", "tốt lắm", "tuyệt Vời"],
-       "responses": ["Không có gì ạ", "Bất cứ khi nào bạn cần tôi luôn sẵn sàng giúp đỡ", "Rất sẵn lòng", "Hãy đánh giá tôi 5 sao nha"]
-      },
-      {"tag": "phàn nàn",
-       "patterns": ["bạn chậm quá", "quá lâu"],
-       "responses": ["xin lỗi bạn", "thật lòng mong bạn bỏ qua cho"]
-      },
-      {"tag": "i9_type",
-       "patterns": ["các loại core i9"],
-       "responses": ["Đối với core i9 tôi có 1 số loại như sau: Core i9 9900K, Core i9 9900KF, Core i9 9900KS, Core i9 9900X, Core i9 13900H"]
-      },
-      {"tag": "i9_detail",
-       "patterns": ["thông tin về core i9","chi tiết về core i9"],
-       "responses": ["Các bộ xử lý này có cấu trúc kết hợp hiệu suất được thiết kế cho hiệu năng thông minh, tối ưu hóa khả năng sáng tạo và điều chỉnh nâng cao để cho phép game thủ chơi game với tốc độ xung nhịp lên đến 5,8 GHz"]
-      },
-      {"tag": "i9_price",
-       "patterns": ["Giá tiền core i9", "giá thành của core i9"],
-       "responses": ["Để có thể sử dụng intel core i9 thì giá thành sản phẩm nằm trong khoảng 8-20 triệu dồng"]
-      },
-      {"tag": "i7_type",
-       "patterns": ["các loại core i7","các dòng i7 hiện nay"],
-       "responses": ["Đối với core i7 tôi có 1 số loại như sau: Core i7 10510U, Core i7 1065G7, Core i7 10210U, Core i7 1035G1"]
-      },
-      {"tag": "i7_detail",
-       "patterns": ["thông tin về core i7","chi tiết về core i7"],
-       "responses": ["Core i7 được xem như mã CPU dành cho phân khúc cao cấp của Intel. Theo thời gian, các thế hệ Core i7 đã được thay đổi rất nhiều theo hướng đem lại hiệu năng tốt hơn, mức giá hợp lý hơn cho khách hàng."]
-      },
-      {"tag": "i7_price",
-       "patterns": ["Giá tiền core i7", "giá thành của core i7"],
-       "responses": ["So với core i9 thì giá thành của i7 chỉ nằm trong khoảng 5-7 triệu đồng cho 1 sản phẩm"]
-      },
-      {"tag": "compare",
-       "patterns": ["So sánh các loại core intel"],
-       "responses": ["Dòng CPU: \nCore i3: 2-4\tCore i5: 2-6\tCore i7: 2-8\tCore i9: 10-18"]
-      }
-]
+{
+  "intents": [
+    {
+      "tag": "Chào",
+      "patterns": [
+        "Xin chào",
+        "Có ai ở đây không?",
+        "một ngày tốt lành",
+        "Chào bạn"
+      ],
+      "responses": [
+        "Xin chào!",
+        "Thật tốt khi được gặp lại bạn"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "Cảm ơn",
+      "patterns": [
+        "Cảm ơn bạn",
+        "Kết quả tốt đấy",
+        "tốt lắm",
+        "tuyệt Vời"
+      ],
+      "responses": [
+        "Không có gì ạ",
+        "Bất cứ khi nào bạn cần tôi luôn sẵn sàng giúp đỡ",
+        "Rất sẵn lòng",
+        "Hãy đánh giá tôi 5 sao nha"
+      ]
+    },
+    {
+      "tag": "phàn nàn",
+      "patterns": [
+        "bạn chậm quá",
+        "quá lâu"
+      ],
+      "responses": [
+        "xin lỗi bạn",
+        "thật lòng mong bạn bỏ qua cho"
+      ]
+    },
+    {
+      "tag": "i9_type",
+      "patterns": [
+        "các loại core i9",
+        "core i9 có những loại nào",
+        "core i9",
+        "có những loại core i9 nào",
+        "Các dòng i7 hiện nay"
+      ],
+      "responses": [
+        "Đối với core i9 tôi có 1 số loại như sau: Core i9 9900K, Core i9 9900KF, Core i9 9900KS, Core i9 9900X, Core i9 13900H",
+        "Một số loại core i9 được kể đến nhiều đó là: Core i9 9900K, Core i9 9900KF, Core i9 9900KS, Core i9 9900X, Core i9 13900H"
+      ]
+    },
+    {
+      "tag": "i9_detail",
+      "patterns": [
+        "thông tin về core i9",
+        "chi tiết về core i9",
+        "Thông tin về i9",
+        "Hiệu suất của i9",
+        "Xung nhịp core i9"
+      ],
+      "responses": [
+        "Các bộ xử lý này có cấu trúc kết hợp hiệu suất được thiết kế cho hiệu năng thông minh, tối ưu hóa khả năng sáng tạo và điều chỉnh nâng cao để cho phép game thủ chơi game với tốc độ xung nhịp lên đến 5,8 GHz"
+      ]
+    },
+    {
+      "tag": "i9_price",
+      "patterns": [
+        "Giá tiền core i9",
+        "giá thành của core i9",
+        "core i9 bao tiền",
+        "i9 giá như thế nào",
+        "Giá tiền các loại i9"
+      ],
+      "responses": [
+        "Để có thể sử dụng intel core i9 thì giá thành sản phẩm nằm trong khoảng 8-20 triệu dồng"
+      ]
+    },
+    {
+      "tag": "i7_type",
+      "patterns": [
+        "các loại core i7",
+        "các dòng i7 hiện nay",
+        "có những loại i7 nào",
+        "Có những loại core i7 nào",
+        "i7 có những dòng nào"
+      ],
+      "responses": [
+        "Đối với core i7 tôi có 1 số loại như sau: Core i7 10510U, Core i7 1065G7, Core i7 10210U, Core i7 1035G1"
+      ]
+    },
+    {
+      "tag": "i7_detail",
+      "patterns": [
+        "thông tin về core i7",
+        "chi tiết về core i7",
+        "Xung nhịp của core i7",
+        "Hiệu năng của core i7",
+        "i7 thông tin thế nào"
+      ],
+      "responses": [
+        "Core i7 được xem như mã CPU dành cho phân khúc cao cấp của Intel. Theo thời gian, các thế hệ Core i7 đã được thay đổi rất nhiều theo hướng đem lại hiệu năng tốt hơn, mức giá hợp lý hơn cho khách hàng."
+      ]
+    },
+    {
+      "tag": "i7_price",
+      "patterns": [
+        "Giá tiền core i7",
+        "giá thành của core i7",
+        "Giá tiền các loại core i7",
+        "Giá tiền i7",
+        "giá tiền những loại cpu i7"
+      ],
+      "responses": [
+        "So với core i9 thì giá thành của i7 chỉ nằm trong khoảng 5-7 triệu đồng cho 1 sản phẩm"
+      ]
+    },
+    {
+      "tag": "compare",
+      "patterns": [
+        "So sánh các loại core intel",
+        "So sánh nhân các loại core intel",
+        "số nhân của các loại cpu intel"
+      ],
+      "responses": [
+        "Dòng CPU: \nCore i3: 2-4\tCore i5: 2-6\tCore i7: 2-8\tCore i9: 10-18"
+      ]
+    }
+  ]
 }

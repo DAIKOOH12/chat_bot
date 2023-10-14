@@ -69,7 +69,7 @@ ngrams('a b c d e f g h', 4)
 words = []
 classes = []
 documents = []
-ignore_words = ['?', 'và', 'à', 'ừ', 'ạ', 'vì', 'từng', 'một_cách']
+ignore_words = ['?', 'và', 'à', 'ừ', 'ạ', 'vì', 'từng', 'một_cách', 'nào','như_nào', 'sao' ,'làm_sao', 'thế_nào', 'có', 'những', 'của']
 
 for intent in intents['intents']: #danh sách các mô hình câu hỏi tương ứng của intents['intents']
     for pattern in intent['patterns']: #danh sách các câu hỏi (patterns) của từng intent
