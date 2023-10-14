@@ -129,6 +129,19 @@
       "responses": [
         "Dòng CPU: \nCore i3: 2-4\tCore i5: 2-6\tCore i7: 2-8\tCore i9: 10-18"
       ]
-    }
+    },
+     {
+      "tag": "build_pc_u10M",
+      "patterns": [
+        "Tôi cần build pc giá dưới 10 triệu",
+        "các loại pc giá dưới 10 triệu",
+        "Tài chính dưới 10 triệu",
+        "Cấu hình pc dưới 10 triệu"
+      ],
+      "responses": [
+        "Chi tiết cầu hình:\nCPU: Intel Core i3-10105 - 2.859.000 đ\nMainboard: Asus Prime H510M-K - 1.679.000 đ\nRAM: Apacer Panther 8GB - 679.000 đ\nSSD: Kingston A400 240GB - 690.000 đ\nPSU: Kenoo ESPORT E450 450W - 439.000 đ\nVỏ case: Case Xigmatek Fadil 1F - 699.000 đ",
+        "Chi tiết cầu hình:\nCPU: AMD Ryzen 5 PRO 4650G MPK - 3.990.000 đ đ\nMainboard: Biostar B450MH - 1.250.000 đ\nRAM: V-Color Skywalker Plus 8GB - 899.000 đ\nSSD: \t\n\nKingston A400 240GB - 690.000 đ\nPSU: DeepCool PF450D 450W - 439.000 đ\nVỏ case: Kenoo 2812 Black - 699.000 đ"
+      ]
+        }
   ]
 }
