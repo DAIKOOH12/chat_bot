@@ -1,4 +1,3 @@
-
 # coding: utf-8
 
 # In[1]:
@@ -6,6 +5,7 @@
 
 import nltk
 from nltk.stem.lancaster import LancasterStemmer
+
 stemmer = LancasterStemmer()
 
 import numpy as np
@@ -16,21 +16,21 @@ import random
 from pyvi import ViPosTagger
 from pyvi import ViTokenizer
 
-
 # In[2]:
 
 
 import pickle
-data = pickle.load( open( "models/training_data", "rb" ) )
+
+data = pickle.load(open("models/training_data", "rb"))
 words = data['words']
 classes = data['classes']
 train_x = data['train_x']
 train_y = data['train_y']
 
 import json
+
 with open('data/intents.json') as json_data:
     intents = json.load(json_data)
-
 
 # In[3]:
 
@@ -55,19 +55,20 @@ def clean_up_sentence(sentence):
     # sentence_words = ViPosTagger.postagging(sentence.lower())
     return sentence_words
 
+
 # bag of words
 def bow(sentence, words, show_details=False):
     sentence_words = clean_up_sentence(sentence)
     # bag of words
-    bag = [0]*len(words)
+    bag = [0] * len(words)
     for s in sentence_words:
-        for i,w in enumerate(words):
+        for i, w in enumerate(words):
             if w == s:
                 bag[i] = 1
                 if show_details:
-                    print ("found in bag: %s" % w)
+                    print("found in bag: %s" % w)
 
-    return(np.array(bag))
+    return (np.array(bag))
 
 
 # In[5]:
@@ -75,13 +76,11 @@ def bow(sentence, words, show_details=False):
 
 bow('I want to special food', words)
 
-
 # In[6]:
 
 
 # load model
 model.load('./models/model.tflearn')
-
 
 # In[7]:
 
@@ -90,14 +89,17 @@ model.load('./models/model.tflearn')
 context = {}
 
 ERROR_THRESHOLD = 0.25
+
+
 def classify(sentence):
     results = model.predict([bow(sentence, words)])[0]
-    results = [[i,r] for i,r in enumerate(results) if r>ERROR_THRESHOLD]
+    results = [[i, r] for i, r in enumerate(results) if r > ERROR_THRESHOLD]
     results.sort(key=lambda x: x[1], reverse=True)
     return_list = []
     for r in results:
         return_list.append((classes[r[0]], r[1]))
     return return_list
+
 
 def response(sentence, userID='1', show_details=False):
     results = classify(sentence)
@@ -106,11 +108,18 @@ def response(sentence, userID='1', show_details=False):
             for i in intents['intents']:
                 if i['tag'] == results[0][0]:
                     if 'context_set' in i:
-                        if show_details: print ('context:', i['context_set'])
+                        if show_details: print('context:', i['context_set'])
                         context[userID] = i['context_set']
-                    if not 'context_filter' in i or (userID in context and 'context_filter' in i and i['context_filter'] == context[userID]):
-                        if show_details: print ('tag:', i['tag'])
+                    if not 'context_filter' in i or (
+                            userID in context and 'context_filter' in i and i['context_filter'] == context[userID]):
+                        if show_details: print('tag:', i['tag'])
                         return print(random.choice(i['responses']))
 
             results.pop(0)
-response("Hello")
+
+
+while True:
+    print("Câu hỏi: ")
+    a = input()
+    response(a)
+
